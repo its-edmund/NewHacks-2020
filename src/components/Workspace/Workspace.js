@@ -1,11 +1,11 @@
 import React from 'react';
 
-const BlocksTray = () => {
+const Workspace = () => {
     return(
         <div>
-            blockstray
+            workspace
         </div>
     )
 }
 
-export default BlocksTray;
+export default Workspace;
