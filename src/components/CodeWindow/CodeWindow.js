@@ -17,6 +17,22 @@ const java = [
     { id: 12, code: "Scanner in = new Scanner(System.in);\nString monkeyCall = in.nextLine();" },
 ]
 
+const python = [
+    { id: 0, code: "cupsOfWater = 9" },
+    { id: 1, code: "price = 3.99" },
+    { id: 2, code: "monkeyHappy = True" },
+    { id: 3, code: "grade = \"A\"" },
+    { id: 4, code: "address = \"123 Sesame Street\"" },
+    { id: 5, code: "if bananas > 5:\n\tmonkeyHappy = True\n" },
+    { id: 6, code: "if bananas > 5:\n\tmonkeyHappy = True\n elif bananas > 3:\n\tmonkeyEat = True\n" },
+    { id: 7, code: "if bananas > 5:\n\tmonkeyHappy = True\n elif bananas > 3:\n\tmonkeyEat = True\nelse \n\tmonkeyHappy = False\n}" },
+    { id: 8, code: "def zero():\n\tmonkeyHappy = False\ndef one():\n\tmonkeyHappy = True;\noptions = {0 : zero,\n\t1 : one,\n}" },
+    { id: 9, code: "while monkeyHappy:\n\tbananasEaten = bananasEaten + 1\n" },
+    { id: 10, code: "for i in range(10,-1,-1):\n\tbananasTaken = bananasTaken + 1\n" },
+    { id: 11, code: "print(\"Ooh Ooh Eee Eee Ahh Ahh\")" },
+    { id: 12, code: "monkeyCall = input(\"\")" },
+]
+
 const renderItem = (language, id) => {
     const result = language.find(obj => obj.id === id);
     console.log(result?.code)
@@ -47,7 +63,7 @@ const languages = [
     },
     {
         menuItem: 'Python', render: () => <Tab.Pane style={{ height: 300 }}>
-            {renderItem(java, 8).split("\n").map((i, key) => {
+            {renderItem(python, 8).split("\n").map((i, key) => {
                 if (i.includes("\t")) {
                     return <div key={key}>&emsp;{i}</div>;
                 }
