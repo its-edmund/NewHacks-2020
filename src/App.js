@@ -1,33 +1,25 @@
 import './App.css';
 import { Divider, Grid, Header, Image, Segment, Button, Input } from 'semantic-ui-react';
 
-import BlocksTray from './components/BlocksTray/BlocksTray';
 import Workspace from './components/Workspace/Workspace';
 import CodeWindow from './components/CodeWindow/CodeWindow';
-
-import BlocksTray from './components/BlocksTray/BlocksTray';
 import BlocksMenu from './components/BlocksTray/BlocksMenu';
 
 function App() {
   return (
-<<<<<<< HEAD
-    <div className="App">
-      <BlocksMenu />
-    </div>
-=======
     <>
-      <Grid> 
+      <Grid>
         <Grid.Column textAlign="center">
-          <Input size='massive' placeholder='Monkey Code'/>
+          <Input size='massive' placeholder='Monkey Code' />
         </Grid.Column>
-      </Grid> 
+      </Grid>
 
       <Grid columns={2} verticalAlign='middle'>
         <Grid.Row stretched>
           <Grid.Column>
             <Segment attached>
-              <BlocksTray/>
-              <Workspace/>
+              <BlocksMenu />
+              <Workspace />
             </Segment>
             <Button attached="bottom">Compile</Button>
 
@@ -36,7 +28,7 @@ function App() {
           <Grid.Column>
 
             <Segment attached>
-              <CodeWindow/>
+              <CodeWindow />
             </Segment>
             <Button attached='bottom'>Download</Button>
 
@@ -45,7 +37,6 @@ function App() {
       </Grid>
 
     </>
->>>>>>> master
   );
 }
 
