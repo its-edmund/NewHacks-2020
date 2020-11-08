@@ -7,7 +7,12 @@ import CodeWindow from './components/CodeWindow/CodeWindow';
 import BlocksMenu from './components/BlocksTray/BlocksMenu';
 
 function App() {
-  const [element, setElement] = useState('');
+  const [element, setElement] = useState(0);
+
+  const onClickHandler = (e) => {
+    console.log(e.target.value)
+    setElement(e.target.value);
+  }
 
   return (
     <Container style={{ margin: 10 }}>
@@ -39,13 +44,13 @@ function App() {
         </Grid.Row>
       </Grid>
        */}
-      <Grid columns={2} rows='equal' textAlign='center' >
+      <Grid columns={2} rows='equal' textAlign='left' >
         <Grid.Row stretched>
 
           <Grid.Column stretched>
 
-            <BlocksMenu />
-            <Workspace attached />
+            <BlocksMenu handleClick={onClickHandler} />
+            <Workspace attached display={element} />
 
           </Grid.Column>
 

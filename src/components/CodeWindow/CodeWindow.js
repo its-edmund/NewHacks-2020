@@ -1,28 +1,66 @@
 import React from 'react';
 import { Message, Tab } from 'semantic-ui-react'
 
+const java = [
+    { id: 0, code: "int cupsOfWater = 9;" },
+    { id: 1, code: "double price = 3.99;" },
+    { id: 2, code: "bool monkeyHappy = true;" },
+    { id: 3, code: "char grade = 'A';" },
+    { id: 4, code: "String address = \"123 Sesame Street\";" },
+    { id: 5, code: "if (bananas > 5) {\n\tmonkeyHappy = true;\n}" },
+    { id: 6, code: "if (bananas > 5) {\n\tmonkeyHappy = true;\n} else if (bananas > 3) {\n\tmonkeyEat = true;\n}" },
+    { id: 7, code: "if (bananas > 5) {\n\tmonkeyHappy = true;\n} else if (bananas > 3) {\n\tmonkeyEat = true;\n} else {\n\tmonkeyHappy = false;\n}" },
+    { id: 8, code: "switch (bananas) {\n\tcase 0:\n\t\tmonkeyHappy = false;\n\t\tbreak;\n\tcase 1:\n\t\tmonkeyHappy = true;\n\t\tbreak;\n}" },
+    { id: 9, code: "while (monkeyHappy) {\n\tbananasEaten = bananasEaten + 1;\n}" },
+    { id: 10, code: "for(int monkeys = 10; monkeys > 0; monkeys--) {\n\tbananasTaken = bananasTaken + 1;\n}" },
+    { id: 11, code: "System.out.println(\"Ooh Ooh Eee Eee Ahh Ahh\")" },
+    { id: 12, code: "Scanner in = new Scanner(System.in);\nString monkeyCall = in.nextLine();" },
+]
+
+const renderItem = (language, id) => {
+    const result = language.find(obj => obj.id === id);
+    console.log(result?.code)
+
+    return result?.code
+}
+
 const languages = [
-    { menuItem: 'Java', render: () => <Tab.Pane  style={{height: 300}}>
-        public static void main(String args[]){'{'} <br/>
-        &emsp; System.out.println(); <br/>
-        {'{'} <br/>
-    </Tab.Pane> },
-    { menuItem: 'C++', render: () => <Tab.Pane  style={{height: 300}}>
-        public static void main(String args[]){'{'} <br/>
-        &emsp; System.out.println(); <br/>
-        {'{'} <br/>
-    </Tab.Pane> },
-    { menuItem: 'Python', render: () => <Tab.Pane  style={{height: 300}}>
-        public static void main(String args[]){'{'} <br/>
-        &emsp; System.out.println(); <br/>
-        {'{'} <br/>
-    </Tab.Pane> },
+    {
+        menuItem: 'Java', render: () => <Tab.Pane style={{ height: 300 }}>
+            {renderItem(java, 8).split("\n").map((i, key) => {
+                if (i.includes("\t")) {
+                    return <div key={key}>&emsp;{i}</div>;
+                }
+                return <div key={key}>{i}</div>;
+            })}
+        </Tab.Pane>
+    },
+    {
+        menuItem: 'C++', render: () => <Tab.Pane style={{ height: 300 }}>
+            {renderItem(java, 8).split("\n").map((i, key) => {
+                if (i.includes("\t")) {
+                    return <div key={key}>&emsp;{i}</div>;
+                }
+                return <div key={key}>{i}</div>;
+            })}
+        </Tab.Pane>
+    },
+    {
+        menuItem: 'Python', render: () => <Tab.Pane style={{ height: 300 }}>
+            {renderItem(java, 8).split("\n").map((i, key) => {
+                if (i.includes("\t")) {
+                    return <div key={key}>&emsp;{i}</div>;
+                }
+                return <div key={key}>{i}</div>;
+            })}
+        </Tab.Pane>
+    },
 ]
 
 const CodeWindow = () => {
-    return(
+    return (
         <div>
-            <Tab panes={languages}/>
+            <Tab panes={languages} />
         </div>
     )
 }
