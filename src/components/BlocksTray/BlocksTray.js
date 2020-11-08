@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
@@ -94,6 +95,19 @@ const BlocksTray = (props) => {
       </DragDropContext>
     </>
   )
+=======
+import React from 'react';
+import { Message } from 'semantic-ui-react'
+
+const BlocksTray = () => {
+    return(
+        <div>
+           <Message style={{height: 100}}>
+                blockstray
+            </Message>
+        </div>
+    )
+>>>>>>> master
 }
 
 export default BlocksTray;
