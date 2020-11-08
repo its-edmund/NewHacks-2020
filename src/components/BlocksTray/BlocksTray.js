@@ -1,9 +1,12 @@
 import React from 'react';
+import { Message } from 'semantic-ui-react'
 
 const BlocksTray = () => {
     return(
         <div>
-            blockstray
+           <Message style={{height: 100}}>
+                blockstray
+            </Message>
         </div>
     )
 }

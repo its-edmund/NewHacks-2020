@@ -8,40 +8,34 @@ import CodeWindow from './components/CodeWindow/CodeWindow';
 function App() {
   return (
     <>
+      <Grid> 
+        <Grid.Column textAlign="center">
+          <Input size='massive' placeholder='Monkey Code'/>
+        </Grid.Column>
+      </Grid> 
 
-     <Input color='red' placeholder='Monkey Code'/>
-
-      <Grid columns={2} divided>
+      <Grid columns={2} verticalAlign='middle'>
         <Grid.Row stretched>
           <Grid.Column>
-            <Segment>
-
+            <Segment attached>
               <BlocksTray/>
-
-              <Divider section />
-
               <Workspace/>
-
             </Segment>
+            <Button attached="bottom">Compile</Button>
 
           </Grid.Column>
+
           <Grid.Column>
 
-            <Button.Group attached='top'>
-              <Button>Java</Button>
-              <Button>C++</Button>
-              <Button>Python</Button>
-            </Button.Group>
-            <CodeWindow/>
-
-            <Button>Compile</Button>
-            <Button>Download</Button>
+            <Segment attached>
+              <CodeWindow/>
+            </Segment>
+            <Button attached='bottom'>Download</Button>
 
           </Grid.Column>
         </Grid.Row>
       </Grid>
 
-      <Divider vertical></Divider>
     </>
   );
 }
