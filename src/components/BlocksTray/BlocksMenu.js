@@ -1,40 +1,38 @@
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
 
-const categories = [
-  {
-    menuItem: 'Actions', render: () => <div class="three basic ui buttons">
-      <button class="ui button">Print</button>
-      <button class="ui button">Input</button>
-      <button class="ui button">Calculations</button>
-    </div>
-  },
-  {
-    menuItem: 'Variables', render: () => <div class="four basic ui buttons">
-      <button class="ui button">Integer</button>
-      <button class="ui button">Double</button>
-      <button class="ui button">Boolean</button>
-      <button class="ui button">Character</button>
-    </div>
-  },
-  {
-    menuItem: 'Conditionals', render: () => <div class="four basic ui buttons">
-      <button class="ui button">if</button>
-      <button class="ui button">if else</button>
-      <button class="ui button">else</button>
-      <button class="ui button">switch</button>
-    </div>
-  },
-  {
-    menuItem: 'Loops', render: () => <div class="three basic ui buttons">
-      <button class="ui button">while</button>
-      <button class="ui button">for</button>
-      <button class="ui button">do while</button>
-    </div>
-  },
-]
-
-const BlocksMenu = () => {
+const BlocksMenu = (props) => {
+  const categories = [
+    {
+      menuItem: 'Variables', render: () => <div class="five basic ui buttons">
+        <button class="ui button" value={0} onClick={props.handleClick}>Integer</button>
+        <button class="ui button" value={1} onClick={props.handleClick}>Double</button>
+        <button class="ui button" value={2} onClick={props.handleClick}>Boolean</button>
+        <button class="ui button" value={3} onClick={props.handleClick}>Character</button>
+        <button class="ui button" value={4} onClick={props.handleClick}>String</button>
+      </div>
+    },
+    {
+      menuItem: 'Conditionals', render: () => <div class="four basic ui buttons">
+        <button class="ui button" value={5} onClick={props.handleClick}>if</button>
+        <button class="ui button" value={6} onClick={props.handleClick}>if else</button>
+        <button class="ui button" value={7} onClick={props.handleClick}>else</button>
+        <button class="ui button" value={8} onClick={props.handleClick}>switch</button>
+      </div>
+    },
+    {
+      menuItem: 'Loops', render: () => <div class="two basic ui buttons">
+        <button class="ui button" value={9} onClick={props.handleClick}>while</button>
+        <button class="ui button" value={10} onClick={props.handleClick}>for</button>
+      </div>
+    },
+    {
+      menuItem: 'Actions', render: () => <div class="two basic ui buttons">
+        <button class="ui button" value={11} onClick={props.handleClick}>Print</button>
+        <button class="ui button" value={12} onClick={props.handleClick}>Input</button>
+      </div>
+    },
+  ]
   return (
     <Tab panes={categories} />
   )
