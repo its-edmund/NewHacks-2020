@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 
-const initial = Array.from({ length: 10 }, (v, k) => k).map(k => {
+const initial = Array.from({ length: 4 }, (v, k) => k).map(k => {
   const custom = {
     id: `id-${k}`,
     content: `Code ${k}`
