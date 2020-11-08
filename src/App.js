@@ -17,7 +17,7 @@ function App() {
     <Container style={{ margin: 10 }}>
       <Grid>
         <Grid.Column textAlign="center">
-          <Header as='h1' >Monkey Business</Header>
+          <Header as='h1' >Monkey Code</Header>
         </Grid.Column>
       </Grid>
       {/* 
