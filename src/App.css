@@ -1,6 +1,8 @@
 .App {
+  background-color: black;
+  color: black;
   text-align: center;
-  text-size-adjust: fill;
+  height: 100%;
 }
 
 
