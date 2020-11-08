@@ -13,26 +13,58 @@ function App() {
           <Input size='massive' placeholder='Monkey Code'/>
         </Grid.Column>
       </Grid> 
+{/* 
+      <Grid celled='internally'>
+        <Grid.Row>
+          <Grid.Column width={3}>
 
-      <Grid columns={2} verticalAlign='middle'>
-        <Grid.Row stretched>
-          <Grid.Column>
-            <Segment attached>
-              <BlocksTray/>
-              <Workspace/>
-            </Segment>
-            <Button attached="bottom">Compile</Button>
+            <BlocksTray/>
+            <Workspace attached/>
+            <Button>Compile</Button>
 
           </Grid.Column>
 
-          <Grid.Column>
+          <Grid.Column> 
 
             <Segment attached>
               <CodeWindow/>
             </Segment>
-            <Button attached='bottom'>Download</Button>
+            <Button>Download</Button>
 
           </Grid.Column>
+
+        </Grid.Row>
+      </Grid>
+       */}
+      <Grid columns={2} rows='equal' textAlign='center' divided>
+        <Grid.Row stretched>
+
+          <Grid.Column stretched>
+
+            <BlocksTray/>
+            <Workspace attached/>
+            
+          </Grid.Column>
+
+          <Grid.Column stretched> 
+
+            <Segment attached>
+              <CodeWindow/>
+            </Segment>  
+
+          </Grid.Column>
+
+        </Grid.Row>
+        <Grid.Row stretched>
+
+          <Grid.Column stretched>
+            <Button>Compile</Button>
+          </Grid.Column>
+
+          <Grid.Column stretched>
+            <Button>Download</Button>
+          </Grid.Column>
+          
         </Grid.Row>
       </Grid>
 
