@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState } from 'react';
 // import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 // import styled from 'styled-components';
@@ -97,3 +98,21 @@
 // }
 
 // export default BlocksTray;
+=======
+import React from 'react';
+import { Message } from 'semantic-ui-react'
+import ReactBlockly from 'react-blockly';
+
+
+const BlocksTray = () => {
+    return(
+        <div>
+           <Message  style={{height: 100}}>
+                blockstray
+            </Message>
+        </div>
+    )
+}
+
+export default BlocksTray;
+>>>>>>> 065ceca8110b7054094c45a55d0e63a5a1d556ba

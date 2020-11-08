@@ -56,7 +56,7 @@ function App() {
 
           <Grid.Column stretched>
 
-            <CodeWindow />
+            <CodeWindow display={element} />
 
           </Grid.Column>
 
