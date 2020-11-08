@@ -7,10 +7,9 @@ import CodeWindow from './components/CodeWindow/CodeWindow';
 import BlocksMenu from './components/BlocksTray/BlocksMenu';
 
 function App() {
-  const [element, setElement] = useState(0);
+  const [element, setElement] = useState('0');
 
   const onClickHandler = (e) => {
-    console.log(e.target.value)
     setElement(e.target.value);
   }
 
@@ -18,7 +17,7 @@ function App() {
     <Container style={{ margin: 10 }}>
       <Grid>
         <Grid.Column textAlign="center">
-          <Input size='massive' placeholder='Monkey Code' />
+          <Header as='h1' >Monkey Business</Header>
         </Grid.Column>
       </Grid>
       {/* 
